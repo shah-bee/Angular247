@@ -1,0 +1,12 @@
+<h3>
+  Let's play the game!
+</h3>
+
+<div class="col-xs-6">
+  <button class="btn btn-success" (click)="onStart()">Start</button>
+  <div class="col-xs-6">
+    <button class="btn btn-danger" (click)="onStop()">Stop</button>
+  </div>
+
+  <app-even (onGameStarted)="onGameStarted($event)"></app-even>
+  <app-odd (onGameStarted)="onGameStarted($event)"></app-odd>
