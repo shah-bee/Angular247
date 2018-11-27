@@ -7,7 +7,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class GameComponent implements OnInit {
 
-  @Output()  onGameStarted = new EventEmitter<{ startCounter : number}>();
+  @Output('evenCounter') evenCounter = new EventEmitter<{ counter: number }>();
+  @Output('oddCounter') oddCounter = new EventEmitter<{ counter: number }>();
 
   inc: number = 1;
   interval;
@@ -19,12 +20,17 @@ export class GameComponent implements OnInit {
   onStart() {
     setInterval(() => {
       this.inc = this.inc + 1;
-      this.onGameStarted.emit({
-        startCounter: this.inc
-      })
-      console.log(this.inc);
+      if (this.inc % 2 == 0) {
+        this.evenCounter.emit({
+          counter: this.inc
+        })
+      } else {
+        this.oddCounter.emit({
+          counter: this.inc
+        })
+      }
     }, 3000);
-    
+
   }
 
 }

@@ -1,2 +1,4 @@
-<app-game></app-game>
+<app-game (evenCounter)="evenGameCounter($event)" (oddCounter)="oddGameCounter($event)" ></app-game>
+<app-odd [oddNumber]="oddCounter"></app-odd>
+<app-even [evenNumber]="evenCounter"></app-even>
 <router-outlet></router-outlet>
