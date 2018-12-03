@@ -1,0 +1,10 @@
+<h2>
+  shopping-list !
+</h2>
+<app-shopping-edit (newIgredientAdded)="addNewIngredient($event)"></app-shopping-edit>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let ingredient of Ingredients">
+    {{ingredient.Name}} ({{ingredient.Amount}})
+  </li>
+</ul>

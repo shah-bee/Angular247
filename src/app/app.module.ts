@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { GameComponent } from './game/game.component';
 import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameComponent,
-    OddComponent,EvenComponent
+    OddComponent,EvenComponent, ShoppingListComponent, ShoppingEditComponent, HeaderComponent
   ],
   imports: [
     BrowserModule,
